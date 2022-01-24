@@ -168,7 +168,7 @@ $(document).ready(function () {
         var uv = $("<p>").text("UV Index: ");
         var btn = $("<span>").addClass("btn btn-sm").text(response.value);
   
-        // change color depending on uv value
+        // change color on uv value
         if (response.value < 3) {
           btn.addClass("btn-success");
         } else if (response.value < 7) {
@@ -181,7 +181,7 @@ $(document).ready(function () {
       });
     }
   
-    // get current history, if any
+    // get current history
     var history = JSON.parse(window.localStorage.getItem("history")) || [];
   
     //Grab the latest history value and use that to populate the weather items
@@ -189,7 +189,7 @@ $(document).ready(function () {
       weatherForcast(history[history.length - 1]);
     }
   
-    //Populate the history items from local storage items
+    //add the history items from local storage items
     for (var i = 0; i < history.length; i++) {
       createRow(history[i]);
     }
