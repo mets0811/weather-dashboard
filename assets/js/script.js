@@ -55,7 +55,7 @@ $(document).ready(function () {
           createRow(cityValue);
         }
   
-        // cRemove content from the id=today element
+        // Remove content from the id=today element
         $("#today").empty();
   
         // create html content for current weather
@@ -90,7 +90,7 @@ $(document).ready(function () {
       });
     }
   
-    //Define getForcast query to get 5 day forcast
+    // query to get 5 day forcast
     function getForecast(cityValue) {
       var queryURL =
         "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -121,7 +121,6 @@ $(document).ready(function () {
             var body = $("<div>").addClass("card-body p-2");
   
             //Added in a fix to date format for Safari browsers since the return date format is not supported
-            //Needed to replace the dash "-" with the forward "/" slash
             tempDate = new Date(
               response.list[i].dt_txt.replace(/-/g, "/")
             ).toLocaleDateString();
@@ -150,7 +149,7 @@ $(document).ready(function () {
       });
     }
   
-    //Define getUVIndex query to get UV Index for a particular city by latitude and longitude
+    // UV Index for a particular city by latitude and longitude
     function getUVIndex(latitude, longitude) {
       var queryURL =
         "https://api.openweathermap.org/data/2.5/uvi?appid=" +
