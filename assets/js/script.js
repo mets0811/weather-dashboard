@@ -11,14 +11,14 @@ $(document).ready(function () {
       // Clear input box
       $("#search").val("");
   
-      //Call weatherForcast function 
+      //weatherForcast function 
       weatherForcast(cityValue);
     });
   
     // Set JQuery Event Handler for any list item in history and then call the weatherForcast function
     $("#history-list").on("click", "li", function () {
       var historyValue = $(this).text(); //Grab the value of the history item
-      weatherForcast(historyValue); //call the seatherForcast function with the histroy Value
+      weatherForcast(historyValue); 
     });
   
     // Define function to create row for history with previous cities and append to id=history-list element
