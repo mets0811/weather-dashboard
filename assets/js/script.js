@@ -30,7 +30,7 @@ $(document).ready(function () {
       historyListItem.prepend(li);
     }
   
-    //Define weatherForcast query to get weather forcast
+    // weatherForcast query to get weather forcast
     function weatherForcast(cityValue) {
       var queryURL =
         "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -40,13 +40,13 @@ $(document).ready(function () {
         "&appid=" +
         apikey;
   
-      //Define Ajax call
+      //ajax call
       $.ajax({
         url: queryURL,
         type: "GET",
         dataType: "json",
       }).then(function (response) {
-        // create history link for this search
+        // create history link for this search section 
         if (history.indexOf(cityValue) === -1) {
           history.push(cityValue);
           window.localStorage.setItem("history", JSON.stringify(history));
