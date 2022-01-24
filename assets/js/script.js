@@ -11,7 +11,7 @@ $(document).ready(function () {
       // Clear input box
       $("#search").val("");
   
-      //Call weatherForcast function using the search value
+      //Call weatherForcast function 
       weatherForcast(cityValue);
     });
   
