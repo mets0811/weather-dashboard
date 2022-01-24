@@ -5,7 +5,7 @@ $(document).ready(function () {
   
     //JQuery Event Handler for click event on Search Button
     $("#searchBtn").on("click", function () {
-      // Get the value from the id=search input field
+      // The value from the id=search 
       var cityValue = $("#search").val();
   
       // Clear input box
